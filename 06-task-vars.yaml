@@ -10,7 +10,7 @@
     vars:
       COURSE: ansible
     ansible.builtin.debug:
-        msg: "COURS IS {{ COURSE}} , DURATION IS {{ DURATION }} , TRAINER IS {{ TRAINER }}"
+        msg: "COURSE IS {{ COURSE}} , DURATION IS {{ DURATION }} , TRAINER IS {{ TRAINER }}"
   - name: print the variables1
     ansible.builtin.debug:
       msg: "COURSE IS {{ COURSE}} , DURATION IS {{ DURATION }} , TRAINER IS {{ TRAINER }}"      
