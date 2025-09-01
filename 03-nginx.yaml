@@ -1,15 +1,29 @@
-- name: install nginx in web servers
+# - name: install nginx in web servers
+#   hosts: web
+#   become: yes
+#   tasks: 
+#   - name: install nginx
+#     ansible.builtin.package:
+#       name: nginx
+#       state: present
+#   - name : start the nginx
+#     ansible.builtin.service:
+#       name: nginx
+#       state: started
+#       enabled: yes
+
+- name : uninstall nginx in web server
   hosts: web
   become: yes
-  tasks: 
-  - name: install nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
-  - name : start the nginx
+  tasks:
+  - name: stop the nginx service
     ansible.builtin.service:
       name: nginx
-      state: started
-      enabled: yes
-
+      state: stopped
+      enabled: no
+  - name : uninstall nginx service
+    ansible.builtin.package:
+      name: nginx
+      state: absent
+          
 
