@@ -1,0 +1,5 @@
+- name : PING
+  host : web
+  taasks : 
+  - name : ping the server
+    ansibile.builtin.ping:
