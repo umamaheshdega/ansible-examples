@@ -1,6 +1,6 @@
 - name: variables for inventory
-  hosts: local
-  connection: local
+  hosts: web
+  # connection: local
   tasks:
   - name: print the information
     ansible.builtin.debug:
