@@ -1,5 +1,5 @@
 - name : PING
-  host : web
+  host : backend
   tasks : 
   - name : ping the server
     ansibile.builtin.ping:
